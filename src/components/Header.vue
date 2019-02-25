@@ -22,18 +22,17 @@ export default {}
   color: #fff;
   display: flex;
   font-family: 'Sansita', sans-serif;
-  letter-spacing: 2px;
   font-size: 2.5rem;
   justify-content: center;
   height: 180px;
+  letter-spacing: 2px;
   width: 100%;
+}
+.svg-inline--fa {
+  padding-right: 17px;
 }
 
 h1 {
   margin-bottom: 20px;
-}
-
-.svg-inline--fa {
-  padding-right: 15px;
 }
 </style>
