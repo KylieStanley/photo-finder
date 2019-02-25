@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="form">
     <form @submit.prevent="onSubmit">
       <input @input="updateSearch" type="text" v-model="search" />
       <button class="search-btn">Search</button>
@@ -32,14 +32,19 @@ export default {
 </script>
 
 <style scoped>
+form {
+  margin: 10px 0 25px;
+}
+
 input {
   border-radius: 20px;
   border-width: 2px;
-  border-color: gray;
-  border-top-color: gray;
-  padding: 0 10px;
+  border: 2px solid gray;
+  font-size: 16px;
   margin-right: 5px;
-  height: 30px;
+  outline: none;
+  padding: 0 13px;
+  height: 32px;
   width: 200px;
 }
 .search-btn {
@@ -47,7 +52,13 @@ input {
   border: transparent;
   border-radius: 30px;
   color: #fff;
-  font-size: 0.8rem;
+  font-size: 16px;
+  outline: none;
   padding: 9px 13px;
+  transition: 0.2s;
+}
+
+.search-btn:hover {
+  background-color: #0082bd;
 }
 </style>
