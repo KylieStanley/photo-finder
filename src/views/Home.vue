@@ -2,6 +2,9 @@
   <div class="home">
     <Header />
     <Form @searched="filterPhotos" />
+    <div class="photo-container">
+      <Photo v-for="photo in photos" :key="photo.id" :image="photo.image" />
+    </div>
   </div>
 </template>
 
@@ -9,12 +12,14 @@
 // @ is an alias to /src
 import Header from '@/components/Header.vue'
 import Form from '@/components/Form.vue'
+import Photo from '@/components/Photo.vue'
 
 export default {
   name: 'home',
   components: {
     Header,
-    Form
+    Form,
+    Photo
   },
   data() {
     return {
@@ -22,9 +27,22 @@ export default {
     }
   },
   methods: {
-    filterPhotos(photo) {
-      this.photos.push(photo)
+    filterPhotos(photos) {
+      this.photos = photos
     }
   }
 }
 </script>
+
+<style>
+.home {
+  min-height: 90vh;
+  overflow-y: scroll;
+}
+.photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+</style>
