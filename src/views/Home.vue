@@ -3,7 +3,15 @@
     <Header />
     <Form @searched="filterPhotos" />
     <div class="photo-container">
-      <Photo v-for="photo in photos" :key="photo.id" :image="photo.image" />
+      <div v-if="Array.isArray(photos) && !photos.length">
+        There are no photos that match your search
+      </div>
+      <Photo
+        v-else
+        v-for="photo in photos"
+        :key="photo.id"
+        :image="photo.image"
+      />
     </div>
   </div>
 </template>
@@ -23,7 +31,7 @@ export default {
   },
   data() {
     return {
-      photos: []
+      photos: null
     }
   },
   methods: {
