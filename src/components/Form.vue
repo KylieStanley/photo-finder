@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import { cleanPhotos, parseQueryString } from '@/helper.js'
 export default {
   data() {
     return {
@@ -15,8 +16,13 @@ export default {
     }
   },
   methods: {
-    onSubmit() {
-      this.$emit('searched', this.search)
+    async onSubmit() {
+      const search = parseQueryString(this.search)
+      const url = `https://api.unsplash.com/search/photos?client_id=c7c68ecb7f043eb6d4e2fcaf6866fe06994661eac0fc84ec3859fc15fefc6ff4&query=${search}`
+      const response = await fetch(url)
+      const results = await response.json()
+      let photos = cleanPhotos(results.results)
+      this.$emit('searched', photos)
     },
     updateSearch() {
       this.search = event.target.value
