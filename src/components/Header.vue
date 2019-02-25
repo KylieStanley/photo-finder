@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <h1>Photo Finder</h1>
+    <h1>Photo <font-awesome-icon icon="camera" />Finder</h1>
   </div>
 </template>
 
@@ -28,7 +28,12 @@ export default {}
   height: 180px;
   width: 100%;
 }
+
 h1 {
   margin-bottom: 20px;
+}
+
+.svg-inline--fa {
+  padding-right: 15px;
 }
 </style>
