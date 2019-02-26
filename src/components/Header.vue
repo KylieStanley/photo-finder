@@ -13,19 +13,14 @@ export default {}
 
 .header {
   align-items: center;
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(0, 148, 211, 1) 51%,
-    rgba(0, 96, 137, 1) 100%
-  );
+  background: rgba(0, 148, 211, 1);
   color: #fff;
   display: flex;
   font-family: 'Sansita', sans-serif;
   font-size: 2.5rem;
   justify-content: center;
-  height: 180px;
   letter-spacing: 2px;
+  height: 150px;
   width: 100%;
 }
 .svg-inline--fa {
