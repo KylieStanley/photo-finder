@@ -17,7 +17,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import Header from '@/components/Header.vue'
 import Form from '@/components/Form.vue'
 import Photo from '@/components/Photo.vue'
@@ -46,6 +45,10 @@ export default {
 .home {
   min-height: 90vh;
   overflow-y: scroll;
+}
+
+.home::-webkit-scrollbar {
+  display: none;
 }
 .photo-container {
   display: flex;
