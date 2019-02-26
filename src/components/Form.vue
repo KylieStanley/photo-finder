@@ -18,7 +18,7 @@ export default {
   methods: {
     async onSubmit() {
       const search = parseQueryString(this.search)
-      const url = `https://api.unsplash.com/search/photos?client_id=c7c68ecb7f043eb6d4e2fcaf6866fe06994661eac0fc84ec3859fc15fefc6ff4&query=${search}`
+      const url = `https://api.unsplash.com/search/photos?per_page=20&client_id=c7c68ecb7f043eb6d4e2fcaf6866fe06994661eac0fc84ec3859fc15fefc6ff4&query=${search}`
       const response = await fetch(url)
       const results = await response.json()
       let photos = cleanPhotos(results.results)
@@ -33,7 +33,7 @@ export default {
 
 <style scoped>
 form {
-  margin: 10px 0 25px;
+  margin: 25px 0;
 }
 
 input {
@@ -45,7 +45,7 @@ input {
   outline: none;
   padding: 0 13px;
   height: 32px;
-  width: 200px;
+  width: 250px;
 }
 .search-btn {
   background-color: #0094d3;
