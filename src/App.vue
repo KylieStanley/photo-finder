@@ -21,15 +21,23 @@
   color: #2c3e50;
 }
 #nav {
-  padding: 30px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  background: rgba(0, 148, 211, 1);
 }
 
 #nav a {
-  font-weight: bold;
   color: #2c3e50;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 5px;
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #fff;
+  font-weight: 900;
 }
 </style>
