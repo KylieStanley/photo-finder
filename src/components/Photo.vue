@@ -16,11 +16,11 @@ export default {
 <style scoped>
 .photo {
   border-radius: 10px;
-  border: 3px solid gray;
-  height: 250px;
+  border: 3px solid #8080807a;
+  height: 230px;
   margin: 10px;
   transition: 0.3s;
-  width: 250px;
+  width: 325px;
 }
 
 .photo:hover {
