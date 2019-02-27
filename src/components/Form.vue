@@ -1,7 +1,7 @@
 <template>
   <div class="form">
     <form @submit.prevent="onSubmit">
-      <input @input="updateSearch" type="text" v-model="search" />
+      <input @input="updateSearch" type="text" v-model="search">
       <button class="search-btn">Search</button>
     </form>
   </div>
@@ -17,8 +17,9 @@ export default {
   },
   methods: {
     async onSubmit() {
+      const key = process.env.APIKEY
       const search = parseQueryString(this.search)
-      const url = `https://api.unsplash.com/search/photos?per_page=20&client_id=c7c68ecb7f043eb6d4e2fcaf6866fe06994661eac0fc84ec3859fc15fefc6ff4&query=${search}`
+      const url = `https://api.unsplash.com/search/photos?per_page=20&client_id=${key}&query=${search}`
       const response = await fetch(url)
       const results = await response.json()
       let photos = cleanPhotos(results.results)
