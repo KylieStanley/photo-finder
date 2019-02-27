@@ -9,6 +9,7 @@
 
 <script>
 import { cleanPhotos, parseQueryString } from '@/helper.js'
+
 export default {
   data() {
     return {
@@ -17,8 +18,7 @@ export default {
   },
   methods: {
     async onSubmit() {
-      console.log(process.env)
-      const key = process.env.APIKEY
+      const key = process.env.VUE_APP_APIKEY
       const search = parseQueryString(this.search)
       const url = `https://api.unsplash.com/search/photos?per_page=20&client_id=${key}&query=${search}`
       const response = await fetch(url)
