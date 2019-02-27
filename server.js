@@ -1,18 +1,13 @@
-// Imports.
 const express = require('express')
-const history = require('connect-history-api-fallback')
+const port = process.env.PORT || 8080
 const app = express()
-// Express server.
-const staticFileMiddleware = express.static(__dirname)
-app.use(staticFileMiddleware)
-app.use(
-  history({
-    disableDotRule: true,
-    verbose: true
-  })
-)
-app.use(staticFileMiddleware)
-const port = 5555
+
+app.use(express.static(__dirname + '/dist/'))
+
+app.get(/.*/, function(req, res) {
+  res.sendFile(__dirname + '/dist/index.html')
+})
+
 app.listen(port, () => {
-  console.log('App listening on port ${5555}!')
+  console.log('App listening on port!')
 })
