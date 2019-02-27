@@ -1,29 +1,29 @@
 # photo-finder
 
-## Project setup
-```
-npm install
-```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+ ## About
+ 
+ Photo Finder is an application where you can search for beautiful photos by any keyword you choose.
+ 
+ ## Setup & Install
+ 
+ - `git clone https://github.com/KylieStanley/photo-finder.git`
+ - `cd photo-finder`
+ - `npm install`
+ - `npm run serve`
+ 
 
-### Compiles and minifies for production
-```
-npm run build
-```
+ ## Tech Stack
+  - Vue.js
 
-### Run your tests
-```
-npm run test
-```
+  
+## Wire Frames
+![image](https://user-images.githubusercontent.com/37158924/53464071-3ed6f380-3a06-11e9-86a4-0e4d7da422cc.png)
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Screenshots
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+## Contributor
+- [Kylie Stanley](https://github.com/KylieStanley)
+
